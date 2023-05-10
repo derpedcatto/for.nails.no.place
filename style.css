@@ -1,0 +1,634 @@
+/*  Global  */
+
+:root {
+  --color-background: #1d1d1f;
+  --color-text: #e2e2e2;
+  --color-card-background: #212023;
+  --color-card-border: #3d3d40;
+
+  --card-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  --card-border-radius: 20px;
+  --card-border-thickness: 2px;
+
+  --card-desktop-padding: 35px;
+  --card-tablet-padding: 30px;
+  --card-phone-padding: 20px;
+
+  --padding-desktop: 50px;
+  --padding-tablet: 25px;
+  --padding-phone: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+/*   Animations   */
+
+@keyframes fade-in-move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-15rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-move-left {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-move-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+section:first-child {
+  animation: fade-in-move-down 1.2s;
+}
+
+.card-heading {
+  animation: fade-in-move-right 3s;
+}
+
+.personal-summary-card,
+.gallery-container,
+.pricelist-container,
+.contacts-container {
+  animation: fade-in-move-left 3s;
+}
+
+/*   Body   */
+
+body {
+  margin: auto;
+  background-color: var(--color-background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23454545' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  gap: 50px;
+}
+
+.card-heading {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-thickness) solid var(--color-card-border);
+  box-shadow: var(--card-shadow);
+  background-color: var(--color-card-background);
+}
+
+.fa-2rem {
+  font-size: 2rem;
+}
+
+.fa-1-6rem {
+  font-size: 1.6rem;
+}
+
+/*  Introduction Card   */
+
+.introduction-card {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-card-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid var(--color-card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.introduction-card-welcome {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-thickness) solid var(--color-card-border);
+  box-shadow: var(--card-shadow);
+  background-color: var(--color-card-background);
+}
+
+.introduction-card-heading {
+  font-weight: 300;
+}
+
+.introduction-card-lead {
+  font-weight: 700;
+}
+
+.introduction-card-text {
+  font-weight: 300;
+}
+
+/*  Personal Summary Card   */
+
+.personal-summary-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-thickness) solid var(--color-card-border);
+  box-shadow: var(--card-shadow);
+  background-color: var(--color-card-background);
+}
+
+.personal-summary-content {
+  font-weight: 300;
+}
+
+/*  Gallery  */
+
+.gallery-container {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+
+.gallery-container-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-thickness) solid var(--color-card-border);
+  box-shadow: var(--card-shadow);
+  background-color: var(--color-card-background);
+}
+
+.gallery-container img {
+  height: 100%;
+  width: 100%;
+}
+
+/*   Price-List Cards   */
+
+.pricelist-container {
+  display: flex;
+  gap: 10px;
+}
+
+.pricelist-card {
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-thickness) solid var(--color-card-border);
+  box-shadow: var(--card-shadow);
+  background-color: var(--color-card-background);
+}
+
+.pricelist-item {
+  margin-bottom: 15px;
+}
+
+.pricelist-item:last-child {
+  margin-bottom: 0px;
+}
+
+.pricelist-item-name {
+  font-weight: 600;
+}
+
+.pricelist-item-price {
+  font-weight: 300;
+}
+
+/*   Contacts Card   */
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  gap: 10px;
+}
+
+.contacts-row {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.contacts-row a {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.contact-card {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  border: var(--card-border-thickness) solid var(--color-text);
+  box-shadow: var(--card-shadow);
+  background-color: var(--color-card-background);
+}
+
+.gradient-instagram {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-telegram {
+  background: linear-gradient(120deg, #2AABEE, #229ED9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-vk {
+  background: linear-gradient(120deg, #0077ff, #6fb2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-whatsapp {
+  background: linear-gradient(45deg, #E5FFCC, #1EBEA5, #00E676, #D0E9EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient-instagram {
+  border: double var(--card-border-thickness) transparent;
+  border-radius: var(--card-border-radius);
+  background-image: linear-gradient(var(--color-card-background), var(--color-card-background)), linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.border-gradient-telegram {
+  border: double var(--card-border-thickness) transparent;
+  border-radius: var(--card-border-radius);
+  background-image: linear-gradient(var(--color-card-background), var(--color-card-background)), linear-gradient(120deg, #2AABEE, #229ED9);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.border-gradient-vk {
+  border: double var(--card-border-thickness) transparent;
+  border-radius: var(--card-border-radius);
+  background-image: linear-gradient(var(--color-card-background), var(--color-card-background)), linear-gradient(120deg, #0077ff, #6fb2ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.border-gradient-whatsapp {
+  border: double var(--card-border-thickness) transparent;
+  border-radius: var(--card-border-radius);
+  background-image: linear-gradient(var(--color-card-background), var(--color-card-background)), linear-gradient(45deg, #E5FFCC, #1EBEA5, #00E676, #D0E9EA);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/*   Footer   */
+
+footer {
+  background-color: var(--color-card-background);
+  border-top: 1px solid var(--color-card-border);
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.footer-text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer-text a {
+  text-decoration-line: underline;
+}
+
+/*   Media queries   */
+
+@media screen and (min-width: 1000px) {
+
+  /*  Global  */
+  main {
+    padding: var(--padding-desktop);
+  }
+
+  .card-heading {
+    font-size: 2.5rem;
+    padding: 15px var(--card-desktop-padding);
+  }
+
+  /*  Introduction Card   */
+
+  .introduction-card {
+    flex-direction: row;
+    gap: 70px;
+  }
+
+  .introduction-card-welcome {
+    padding: var(--card-desktop-padding);
+  }
+
+  .introduction-card-avatar {
+    width: 150%;
+    height: 150%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .introduction-card-heading {
+    font-size: 1.3rem;
+  }
+
+  .introduction-card-lead {
+    font-size: 3rem;
+  }
+
+  .introduction-card-text {
+    font-size: 1.7rem;
+  }
+
+  /*  Personal Summary Card */
+
+  .personal-summary-card {
+    padding: var(--card-desktop-padding);
+  }
+
+  .personal-summary-content {
+    font-size: 1.2rem;
+  }
+
+  /*  Gallery  */
+
+  .gallery-container {
+    flex-direction: row;
+  }
+
+  .gallery-container-column {
+    width: calc(50% - 7.5px);
+  }
+
+  /*   Price-List Cards   */
+
+  .pricelist-container {
+    flex-direction: row;
+  }
+
+  .pricelist-card {
+    width: calc(50% - 7.5px);
+    padding: var(--card-desktop-padding);
+  }
+
+  .pricelist-item-name {
+    font-size: 1.5rem;
+  }
+
+  .pricelist-item-price {
+    font-size: 1.4rem;
+  }
+
+  /*   Contacts Card   */
+
+  .contacts-row {
+    flex-direction: row;
+  }
+
+  .contacts-row:last-child {
+    width: 80%;
+  }
+
+  .contact-card {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 450px) {
+  /*  Global  */
+
+  main {
+    padding: var(--padding-tablet);
+    max-width: 600px;
+  }
+
+  .card-heading {
+    font-size: 2rem;
+    padding: 15px var(--card-tablet-padding);
+  }
+
+  /*  Introduction Card   */
+
+  .introduction-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .introduction-card-welcome {
+    padding: var(--card-tablet-padding);
+  }
+
+  .introduction-card-avatar {
+    width: auto;
+    height: auto;
+    max-width: 450px;
+    max-height: 450px;
+  }
+
+  .introduction-card-heading {
+    font-size: 1.3rem;
+  }
+
+  .introduction-card-lead {
+    font-size: 3rem;
+  }
+
+  .introduction-card-text {
+    font-size: 1.7rem;
+  }
+
+  /*  Personal Summary Card */
+
+  .personal-summary-card {
+    padding: var(--card-tablet-padding);
+  }
+
+  .personal-summary-content {
+    font-size: 1rem;
+  }
+
+  /*  Gallery  */
+
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .gallery-container-column {
+    width: 100%;
+  }
+
+  /*   Price-List Cards   */
+
+  .pricelist-container {
+    flex-direction: column;
+  }
+
+  .pricelist-card {
+    width: 100%;
+    padding: var(--card-tablet-padding);
+  }
+
+  .pricelist-item-name {
+    font-size: 1.5rem;
+  }
+
+  .pricelist-item-price {
+    font-size: 1.4rem;
+  }
+
+  /*   Contacts Card   */
+
+  .contacts-row {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /*  Global  */
+
+  main {
+    padding: var(--padding-phone);
+  }
+
+  .card-heading {
+    font-size: 1.7rem;
+    padding: var(--card-phone-padding);
+  }
+
+  /*  Introduction Card   */
+
+  .introduction-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .introduction-card-avatar {
+    padding: 0px 35px;
+  }
+
+  .introduction-card-welcome {
+    padding: var(--card-phone-padding);
+  }
+
+  .introduction-card-heading {
+    /*  font-size: clamp(1rem, 4vw, 1.3rem);  */
+    font-size: 1rem;
+  }
+
+  .introduction-card-lead {
+    /*  font-size: clamp(2rem, 6vw, 3rem);  */
+    font-size: 2rem;
+  }
+
+  .introduction-card-text {
+    /*  font-size: clamp(1.4rem, 4vw, 1.7rem);  */
+    font-size: 1.4rem;
+  }
+
+  /*  Personal Summary Card */
+
+  .personal-summary-card {
+    padding: var(--card-phone-padding);
+  }
+
+  .personal-summary-content {
+    font-size: 1rem;
+  }
+
+  /*  Gallery  */
+
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .gallery-container-column {
+    width: 100%;
+  }
+
+  /*   Price-List Cards   */
+
+  .pricelist-container {
+    flex-direction: column;
+  }
+
+  .pricelist-card {
+    width: 100%;
+    padding: var(--card-phone-padding);
+  }
+
+  .pricelist-item-name {
+    font-size: 1.3rem;
+  }
+
+  .pricelist-item-price {
+    font-size: 1.2rem;
+  }
+
+  /*   Contacts Card   */
+
+  .contacts-row {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    font-size: 1.3rem;
+  }
+}
