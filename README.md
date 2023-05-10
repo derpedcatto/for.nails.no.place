@@ -2,7 +2,7 @@
   
 ## Website
 https://for-nails-no-place.netlify.app/  
-### Credits:  
+## Credits:  
 Background pattern: https://heropatterns.com/  
 Icons: https://fontawesome.com/  
 Gradients: http://www.brandgradients.com/  
