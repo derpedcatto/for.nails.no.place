@@ -1,6 +1,6 @@
 # for.nails.no.place
   
-## Website  
+## Website
 https://for-nails-no-place.netlify.app/  
 ### Credits:  
 Background pattern: https://heropatterns.com/  
