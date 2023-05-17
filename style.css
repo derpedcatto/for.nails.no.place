@@ -650,28 +650,21 @@ footer {
     padding: var(--card-phone-padding);
   }
 
-    /*  Animations  */
+  /*  Animations  */
 
-    /*  yeah this is not optimal but at least it's not laggy  */
+  /*  damn everything lags if I don't cut out all animations : (  */
 
-    section:nth-child(-n+6) .card-heading {
-      animation: temporarily-hidden 1.5s, fade-in 1.2s 1.5s;
-    }
+  section:nth-child(2) .card-heading {
+    animation: fade-in-move-down 1.3s;
+  }
 
-    section:nth-child(2) .card-heading,
-    section:nth-child(3) .card-heading {
-      animation: temporarily-hidden 1.5s, fade-in-move-right 1.2s 1.5s;
-    }
+  .personal-summary-card {
+    animation: fade-in-move-down 1.35s;
+  }
 
-    .personal-summary-card {
-      animation: temporarily-hidden 1.5s, fade-in-move-left 1.2s 1.5s;
-    }
-    
-    .gallery-container,
-    .pricelist-container,
-    .contacts-container {
-      animation: temporarily-hidden 1.5s, fade-in 1.2s 1.5s;
-    }
+  section:nth-child(3) .card-heading {
+    animation: fade-in-move-down 1.4s;
+  }
 
   /*  Introduction Card   */
 
