@@ -81,6 +81,8 @@ section:first-child {
   animation: fade-in-move-down 1.2s;
 }
 
+/*
+
 .card-heading {
   animation: temporarily-hidden 1.5s, fade-in-move-right 1.2s 1.5s;
 }
@@ -90,6 +92,40 @@ section:first-child {
 .pricelist-container,
 .contacts-container {
   animation: temporarily-hidden 1.5s, fade-in-move-left 1.2s 1.5s;
+}
+
+*/
+
+section:nth-child(2) .card-heading {
+  animation: temporarily-hidden 1.3s, fade-in-move-right 1.2s 1.3s;
+}
+
+.personal-summary-card {
+  animation: temporarily-hidden 1.5s, fade-in-move-left 1.2s 1.5s;
+}
+
+section:nth-child(3) .card-heading {
+  animation: temporarily-hidden 1.7s, fade-in-move-right 1.2s 1.7s;
+}
+
+.gallery-container {
+  animation: temporarily-hidden 1.9s, fade-in-move-left 1.2s 1.9s;
+}
+
+section:nth-child(4) .card-heading {
+  animation: temporarily-hidden 2.1s, fade-in-move-right 1.2s 2.1s;
+}
+
+.pricelist-container {
+  animation: temporarily-hidden 2.3s, fade-in-move-left 1.2s 2.3s;
+}
+
+section:nth-child(5) .card-heading {
+  animation: temporarily-hidden 2.5s, fade-in-move-right 1.2s 2.5s;
+}
+
+.contacts-container {
+  animation: temporarily-hidden 2.7s, fade-in-move-left 1.2s 2.7s;
 }
 
 /*   Body   */
