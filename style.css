@@ -66,6 +66,16 @@
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes temporarily-hidden {
   0% {
     opacity: 0;
@@ -642,15 +652,25 @@ footer {
 
     /*  Animations  */
 
-    .card-heading {
+    /*  yeah this is not optimal but at least it's not laggy  */
+
+    section:nth-child(-n+6) .card-heading {
+      animation: temporarily-hidden 1.5s, fade-in 1.2s 1.5s;
+    }
+
+    section:nth-child(2) .card-heading,
+    section:nth-child(3) .card-heading {
       animation: temporarily-hidden 1.5s, fade-in-move-right 1.2s 1.5s;
     }
+
+    .personal-summary-card {
+      animation: temporarily-hidden 1.5s, fade-in-move-left 1.2s 1.5s;
+    }
     
-    .personal-summary-card,
     .gallery-container,
     .pricelist-container,
     .contacts-container {
-      animation: temporarily-hidden 1.5s, fade-in-move-left 1.2s 1.5s;
+      animation: temporarily-hidden 1.5s, fade-in 1.2s 1.5s;
     }
 
   /*  Introduction Card   */
