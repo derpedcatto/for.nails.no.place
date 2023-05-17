@@ -48,11 +48,6 @@
     transform: translateX(15rem);
   }
 
-  50% {
-    opacity: 0;
-    transform: translateX(15rem);
-  }
-
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -65,30 +60,36 @@
     transform: translateX(-15rem);
   }
 
-  50% {
-    opacity: 0;
-    transform: translateX(-15rem);
-  }
-
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
+@keyframes temporarily-hidden {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
 section:first-child {
   animation: fade-in-move-down 1.2s;
 }
 
 .card-heading {
-  animation: fade-in-move-right 3s;
+  animation: temporarily-hidden 1.5s, fade-in-move-right 1.2s 1.5s;
 }
 
 .personal-summary-card,
 .gallery-container,
 .pricelist-container,
 .contacts-container {
-  animation: fade-in-move-left 3s;
+  animation: temporarily-hidden 1.5s, fade-in-move-left 1.2s 1.5s;
 }
 
 /*   Body   */
